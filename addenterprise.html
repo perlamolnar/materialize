@@ -9,51 +9,41 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	   <meta charset="UTF-8">
+	  <meta charset="UTF-8">
 	</head>
 
     <body class="lime lighten-2">
 	 	<!--Import jQuery before materialize.js-->
       	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
-      	<script>
-			$(document).ready(function() {
-				$('select').material_select();
-				$("#addEmpresa").submit(function(){
-					event.preventDefault();	//Evita el refresh automático que se produce al enviar el form
-					console.log("Se va a enviar el form");
-					var serializado = $("#addEmpresa").serialize();
-					console.log("Formulario serializado:"+serializado);
-				});
-			});
-		</script>
+      	<script type="text/javascript" src="js/scriptForm.js"></script>
 
 	    <div class="container">
 			<div class="row">
 				<form id="addEmpresa" method="post" accept-charset="utf-8">
 					<div class="col l6 m6 s12 input-field">
-						<input id="nEmpresa" type="text" name="nEmpresa" class="validate" maxlength="100">
+						<input id="nEmpresa" type="text" name="nEmpresa" class="validate" maxlength="100" value="Digital Marketing SA">
 		          		<label data-error="CIF Incorrecto" for="nEmpresa">Nombre Empresa</label>
 	          		</div>
 
 	          		<div class="col l6 m6 s12 input-field">
 						<input id="cif" type="text" name="cif" class="validate" maxlength="10" 
-						pattern="(([A-Za-z]{1})([-]?)([0-9]{8}))">
+						pattern="(([A-Za-z]{1})([-]?)([0-9]{8}))" value="M-77777777">
 		          		<label for="cif">CIF</label>
 	          		</div>
 
 					<div class="col l6 m6 s12 input-field">
-						<input id="direccion" type="text" name="cif" class="validate" maxlength="100">
+						<input id="direccion" type="text" name="direccion" class="validate" maxlength="100" value="C/Sant Pol 3. 2º3ª">
 		          		<label for="direccion">Dirección</label>
 	          		</div>
 
 					<div class="col l6 m6 s12 input-field">
-						<input id="cp" type="text" name="cp" class="validate" maxlength="5" pattern="[0-9]{5}">
+						<input id="cp" type="text" name="cp" class="validate" maxlength="5" pattern="[0-9]{5}" value="08880">
 		          		<label for="cp" data-error="Error Código Postal">Código postal</label>
 	          		</div>
 
 					<div class="col l6 m6 s12 input-field">
-						<input id="poblacion" type="text" name="poblacion" class="validate" maxlength="100" >
+						<input id="poblacion" type="text" name="poblacion" class="validate" maxlength="100" value="Cubelles">
 		          		<label for="poblacion" >Población</label>
 	          		</div>
 
@@ -69,12 +59,12 @@
 					</div>
 
 					<div class="col l6 m6 s12 input-field">
-						<input id="telefono" type="text" name="telefono" class="validate" maxlength="9" pattern="[0-9]{9}">
+						<input id="telefono" type="text" name="telefono" class="validate" maxlength="9" pattern="[0-9]{9}" value="693208185">
 		          		<label for="telefono" >Teléfono</label>
 	          		</div>
 
 					<div class="col l6 m6 s12 input-field">
-						<input id="email" type="email" name="email" class="validate" maxlength="100" >
+						<input id="email" type="email" name="email" class="validate" maxlength="100" value="mk@digital.com">
 		          		<label for="email" >Email</label>
 	          		</div>
 				  	<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
