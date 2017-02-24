@@ -28,6 +28,7 @@ $(document).ready(function() {
 						if(debug) console.log (result.campos);
 						if(debug) console.log (result.valores);
 						if(debug) console.log (result.sql);
+						if(debug) console.log (result.resultado);
 					},
 					error : function(result){
 						alert("errorrrrrrr!!!");
